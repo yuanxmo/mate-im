@@ -1,0 +1,17 @@
+dubbo:
+  consumer:
+    timeout: 3000
+    check: false
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+#    TODO
+    address: nacos://${mate.im.nacos.server.url}
+    parameters:
+      namespace: ${mate.im.dubbo.nacos.namespace}
+      group: ${mate.im.dubbo.nacos.group}
+  application:
+    name: ${spring.application.name}
+    qos-enable: true
+    qos-accept-foreign-ip: false

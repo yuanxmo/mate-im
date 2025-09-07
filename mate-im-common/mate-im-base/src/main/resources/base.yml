@@ -1,0 +1,34 @@
+mate:
+  im:
+    nacos:
+      server:
+        url: xxx
+        username: xxx
+        password: xxx
+        namespace: xxx
+    dubbo:
+      nacos:
+        namespace: xxx
+        group: xxx
+        username: xxx
+        password: xxx
+    postgreSQL:
+      url: xxx
+      username: xxx
+      password: xxx
+      database: xxx
+    redis:
+      host: xxx
+      port: xxx
+      password: xxx
+    xxl-job:
+      url: xxx
+      appName: xxx
+      accessToken: xxx
+    sentinel:
+      url: xxx
+      port: xxx
+      nacos:
+        data-id: xxx
+        username: xxx
+        password: xxx

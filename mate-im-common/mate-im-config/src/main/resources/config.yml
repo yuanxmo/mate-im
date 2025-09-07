@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${mate.im.nacos.server.url}
+        username: ${mate.im.nacos.server.username}
+        password: ${mate.im.nacos.server.password}
+      config:
+        server-addr: ${mate.im.nacos.server.url}
+        username: ${mate.im.nacos.server.username}
+        password: ${mate.im.nacos.server.}
+        file-extension: properties
+        name: ${spring.application.name}
