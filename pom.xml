@@ -109,55 +109,61 @@
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-config</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-datasource</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-cache</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-lock</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-rpc</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-sa-token</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-limiter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-prometheus</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-skywalking</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mate.im</groupId>
+                <artifactId>mate-im-api</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
         </dependencies>

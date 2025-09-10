@@ -5,9 +5,11 @@ spring:
         server-addr: ${mate.im.nacos.server.url}
         username: ${mate.im.nacos.server.username}
         password: ${mate.im.nacos.server.password}
+        namespace: ${mate.im.nacos.server.namespace}
       config:
         server-addr: ${mate.im.nacos.server.url}
         username: ${mate.im.nacos.server.username}
-        password: ${mate.im.nacos.server.}
+        password: ${mate.im.nacos.server.password}
+        namespace: ${mate.im.nacos.server.namespace}
         file-extension: properties
         name: ${spring.application.name}
