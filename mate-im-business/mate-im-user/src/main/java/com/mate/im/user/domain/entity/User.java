@@ -4,17 +4,13 @@ import cn.hutool.crypto.digest.DigestUtil;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
-import java.time.OffsetDateTime;
 import java.util.Date;
 
 import com.mate.im.api.user.constants.UserRole;
 import com.mate.im.api.user.constants.UserStateEnum;
 import com.mate.im.datasource.domain.entity.BaseEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.experimental.Accessors;
 
 /**
  * <p>

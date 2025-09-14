@@ -1,9 +1,12 @@
 package com.mate.im.datasource.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import java.util.Date;
 import java.util.StringJoiner;
 
 /**
@@ -11,38 +14,40 @@ import java.util.StringJoiner;
  *
  * @author yuanxmo
  */
+@Getter
+@Setter
 public class BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
      * 主键
      */
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
      * 创建时间
      */
-    @TableField(value = "gmt_create", fill = FieldFill.INSERT)
-    private OffsetDateTime gmtCreate;
+    @TableField(fill = FieldFill.INSERT)
+    private Date gmtCreate;
 
     /**
      * 修改时间
      */
-    @TableField(value = "gmt_modified", fill = FieldFill.INSERT_UPDATE)
-    private OffsetDateTime gmtModified;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date gmtModified;
 
     /**
      * 是否删除
      */
     @TableLogic
-    @TableField(value = "deleted", fill = FieldFill.INSERT)
-    private Boolean deleted;
+    @TableField(fill = FieldFill.INSERT)
+    private Integer deleted;
 
     /**
      * 乐观锁版本号
      */
-    @TableField(value = "lock_version", fill = FieldFill.INSERT)
+    @TableField(fill = FieldFill.INSERT)
     private Integer lockVersion;
 
     public Long getId() {
@@ -53,27 +58,27 @@ public class BaseEntity implements Serializable {
         this.id = id;
     }
 
-    public OffsetDateTime getGmtCreate() {
+    public Date getGmtCreate() {
         return gmtCreate;
     }
 
-    public void setGmtCreate(OffsetDateTime gmtCreate) {
+    public void setGmtCreate(Date gmtCreate) {
         this.gmtCreate = gmtCreate;
     }
 
-    public OffsetDateTime getGmtModified() {
+    public Date getGmtModified() {
         return gmtModified;
     }
 
-    public void setGmtModified(OffsetDateTime gmtModified) {
+    public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
     }
 
-    public Boolean getDeleted() {
+    public Integer getDeleted() {
         return deleted;
     }
 
-    public void setDeleted(Boolean deleted) {
+    public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
 

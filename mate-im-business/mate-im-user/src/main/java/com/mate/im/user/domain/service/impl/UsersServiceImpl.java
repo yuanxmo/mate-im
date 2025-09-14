@@ -4,7 +4,6 @@ import com.mate.im.user.domain.entity.User;
 import com.mate.im.user.domain.service.IUsersService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mate.im.user.infrastructure.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
