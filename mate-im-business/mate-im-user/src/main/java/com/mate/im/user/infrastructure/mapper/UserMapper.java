@@ -1,7 +1,7 @@
 package com.mate.im.user.infrastructure.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mate.im.user.domain.entity.Users;
+import com.mate.im.user.domain.entity.User;
 
 /**
  * <p>
@@ -11,6 +11,5 @@ import com.mate.im.user.domain.entity.Users;
  * @author yuanxmo
  * @since 2025-09-10
  */
-public interface UsersMapper extends BaseMapper<Users> {
-
+public interface UserMapper extends BaseMapper<User> {
 }

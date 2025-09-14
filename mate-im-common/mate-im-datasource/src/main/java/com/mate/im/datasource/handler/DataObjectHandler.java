@@ -6,6 +6,7 @@ import org.apache.ibatis.reflection.MetaObject;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
+import java.util.Date;
 
 /**
  * 自动填充
@@ -15,39 +16,15 @@ import java.time.ZoneOffset;
 public class DataObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.setFieldValByNameNotNull(
-                "gmtCreate",
-                OffsetDateTime.of(
-                        LocalDateTime.now(),
-                        ZoneOffset.systemDefault().getRules().getOffset(LocalDateTime.now()
-                        )
-                ),
-                metaObject
-        );
-        this.setFieldValByNameNotNull(
-                "gmtModified",
-                OffsetDateTime.of(
-                        LocalDateTime.now(),
-                        ZoneOffset.systemDefault().getRules().getOffset(LocalDateTime.now()
-                        )
-                ),
-                metaObject
-        );
-        this.setFieldValByName("deleted", false, metaObject);
+        this.setFieldValByNameNotNull("gmtCreate", new Date(), metaObject);
+        this.setFieldValByNameNotNull("gmtModified", new Date(), metaObject);
+        this.setFieldValByName("deleted", 0, metaObject);
         this.setFieldValByName("lockVersion", 0, metaObject);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        this.setFieldValByName(
-                "gmtModified",
-                OffsetDateTime.of(
-                        LocalDateTime.now(),
-                        ZoneOffset.systemDefault().getRules().getOffset(LocalDateTime.now()
-                        )
-                ),
-                metaObject
-        );
+        this.setFieldValByName("gmtModified", new Date(), metaObject);
     }
 
     /**

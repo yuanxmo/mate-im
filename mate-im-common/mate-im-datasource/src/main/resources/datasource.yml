@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: ${mate.im.postgresql.url}
-    username: ${mate.im.postgresql.username}
-    password: ${mate.im.postgresql.password}
-    driver-class-name: org.postgresql.Driver
+    url: ${mate.im.mysql.url}
+    username: ${mate.im.mysql.username}
+    password: ${mate.im.mysql.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     # Druid连接池配置
     #    datasource.druid:
@@ -23,5 +23,7 @@ spring:
 # MyBatis配置
 mybatis:
   configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-parameter-values: true
     map-underscore-to-camel-case: true # 将数据库字段的下划线命名转换为驼峰命名
   mapper-locations: classpath:mapper/*.xml # MyBatis映射文件所在的位置，这里是使用XML的配置方式时需要配置的部分

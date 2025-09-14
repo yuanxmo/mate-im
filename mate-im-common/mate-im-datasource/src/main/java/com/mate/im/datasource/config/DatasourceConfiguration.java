@@ -27,6 +27,7 @@ public class DatasourceConfiguration {
         interceptor.addInnerInterceptor(new BlockAttackInnerInterceptor());
         // 分页
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
+        return  interceptor;
     }
 
 }
