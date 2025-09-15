@@ -18,5 +18,9 @@ spring:
           uri: lb://mate-im-auth
           predicates:
             - Path=/auth/**,/token/**
+        - id: mate-im-user
+          uri: lb://mate-im-user
+          predicates:
+            - Path=/user/**
 server:
-  port: 8081
+  port: 8090
