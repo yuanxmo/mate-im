@@ -10,9 +10,7 @@ mate:
       nacos:
         namespace: xxx
         group: xxx
-        username: xxx
-        password: xxx
-    postgreSQL:
+    mysql:
       url: xxx
       username: xxx
       password: xxx
