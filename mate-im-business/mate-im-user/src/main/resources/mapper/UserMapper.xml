@@ -9,13 +9,16 @@
         <result column="gmt_modified" property="gmtModified" />
         <result column="nick_name" property="nickName" />
         <result column="password_hash" property="passwordHash" />
-        <result column="state" property="state" />
-        <result column="invite_code" property="inviteCode" />
         <result column="email" property="email" />
         <result column="telephone" property="telephone" />
-        <result column="inviter_id" property="inviterId" />
-        <result column="last_login_time" property="lastLoginTime" />
+        <result column="sex" property="sex" />
+        <result column="birth_date" property="birthDate" />
+        <result column="user_signature" property="userSignature" />
         <result column="avatar" property="avatar" />
+        <result column="state" property="state" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="invite_code" property="inviteCode" />
+        <result column="inviter_id" property="inviterId" />
         <result column="user_role" property="userRole" />
         <result column="deleted" property="deleted" />
         <result column="lock_version" property="lockVersion" />

@@ -4,6 +4,7 @@ import cn.hutool.crypto.digest.DigestUtil;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import com.mate.im.api.user.constants.UserRole;
@@ -42,11 +43,6 @@ public class User extends BaseEntity implements Serializable {
     private String passwordHash;
 
     /**
-     * 邀请码
-     */
-    private String inviteCode;
-
-    /**
      * 邮箱
      */
     private String email;
@@ -55,6 +51,26 @@ public class User extends BaseEntity implements Serializable {
      * 手机号
      */
     private String telephone;
+
+    /**
+     * 性别
+     */
+    private Integer sex;
+
+    /**
+     * 出生日期
+     */
+    private LocalDate birthDate;
+
+    /**
+     * 个性签名
+     */
+    private String userSignature;
+
+    /**
+     * 邀请码
+     */
+    private String inviteCode;
 
     /**
      * 邀请人用户ID
@@ -95,21 +111,4 @@ public class User extends BaseEntity implements Serializable {
         this.setInviterId(inviterId);
         return this;
     }
-
-    /**
-     * 注册（内测用户）
-     * @param email 邮箱
-     * @param nickName 昵称
-     * @param password 密码
-     * @param inviteCode 邀请码
-     * @param inviterId 邀请人ID
-     * @return 用户对象
-     */
-    public User registerInnerTest(String email, String nickName, String password, String inviteCode, String inviterId) {
-        this.register(email, nickName, password, inviteCode, inviterId);
-        this.setUserRole(UserRole.INTERNAL_TEST_USER);
-        return this;
-    }
-
-
 }
