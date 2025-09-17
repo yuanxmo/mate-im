@@ -27,10 +27,6 @@ public enum UserOperateTypeEnum {
      */
     ACTIVE,
     /**
-     * 身份认证
-     */
-    AUTH,
-    /**
      * 修改信息
      */
     MODIFY;

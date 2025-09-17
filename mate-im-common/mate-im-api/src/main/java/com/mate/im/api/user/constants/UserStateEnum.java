@@ -11,10 +11,6 @@ public enum UserStateEnum {
      */
     INIT,
     /**
-     * 实名认证
-     */
-    AUTH,
-    /**
      * 正常使用
      */
     ACTIVE,

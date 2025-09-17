@@ -10,7 +10,6 @@
     <modules>
         <module>mate-im-common</module>
         <module>mate-im-connector</module>
-        <module>mate-im-transfer</module>
         <module>mate-im-business</module>
         <module>mate-im-gateway</module>
     </modules>
