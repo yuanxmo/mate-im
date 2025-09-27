@@ -4,9 +4,10 @@ import cn.hutool.crypto.digest.DigestUtil;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
 
+import com.github.houbb.sensitive.annotation.strategy.SensitiveStrategyEmail;
+import com.github.houbb.sensitive.annotation.strategy.SensitiveStrategyPhone;
 import com.mate.im.api.user.constants.UserRole;
 import com.mate.im.api.user.constants.UserStateEnum;
 import com.mate.im.datasource.domain.entity.BaseEntity;
@@ -45,22 +46,24 @@ public class User extends BaseEntity implements Serializable {
     /**
      * 邮箱
      */
+    @SensitiveStrategyEmail
     private String email;
 
     /**
      * 手机号
      */
+    @SensitiveStrategyPhone
     private String telephone;
 
     /**
      * 性别
      */
-    private Integer sex;
+    private Integer gender;
 
     /**
      * 出生日期
      */
-    private LocalDate birthDate;
+    private Date birthDate;
 
     /**
      * 个性签名

@@ -2,11 +2,8 @@ package com.mate.im.user.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
-import java.time.OffsetDateTime;
+import java.util.Date;
 
 import com.mate.im.datasource.domain.entity.BaseEntity;
 import lombok.Data;
@@ -44,7 +41,7 @@ public class UserOperateStream extends BaseEntity implements Serializable {
      * 操作时间
      */
     @TableField("operate_time")
-    private OffsetDateTime operateTime;
+    private Date operateTime;
 
     /**
      * 操作参数

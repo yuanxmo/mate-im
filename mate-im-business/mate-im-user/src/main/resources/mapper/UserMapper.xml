@@ -11,7 +11,7 @@
         <result column="password_hash" property="passwordHash" />
         <result column="email" property="email" />
         <result column="telephone" property="telephone" />
-        <result column="sex" property="sex" />
+        <result column="gender" property="gender" />
         <result column="birth_date" property="birthDate" />
         <result column="user_signature" property="userSignature" />
         <result column="avatar" property="avatar" />
