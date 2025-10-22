@@ -19,6 +19,8 @@ mate:
       host: xxx
       port: xxx
       password: xxx
+    rocketmq:
+      url: xxx
     xxl-job:
       url: xxx
       appName: xxx
