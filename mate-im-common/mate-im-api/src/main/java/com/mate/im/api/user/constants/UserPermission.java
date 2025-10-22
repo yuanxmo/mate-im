@@ -1,28 +1,20 @@
 package com.mate.im.api.user.constants;
 
 /**
- * 用户权限
- *
  * @author yuanxmo
  */
 public enum UserPermission {
-    /**
-     * 基本权限
-     */
     BASIC,
 
     /**
-     * 群聊权限
+     * 冻结聊天功能
      */
-    GROUP_BASIC,
+    IM,
 
     /**
-     * 已冻结权限
+     * 冻结用户功能
      */
-    FROZEN,
+    USER,
 
-    /**
-     * 无任何权限
-     */
     NONE;
 }

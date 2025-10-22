@@ -28,6 +28,8 @@ import lombok.Setter;
 public class User extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    private String userId;
+
     /**
      * 昵称
      */
