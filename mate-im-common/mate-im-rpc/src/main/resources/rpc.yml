@@ -6,10 +6,8 @@ dubbo:
     name: dubbo
     port: -1
   registry:
-    address: nacos://${mate.im.nacos.server.url}
+    address: nacos://${mate.im.nacos.server.username}:${mate.im.nacos.server.password}${mate.im.nacos.server.url}
     parameters:
-      username: ${mate.im.nacos.server.username}
-      password: ${mate.im.nacos.server.password}
       namespace: ${mate.im.dubbo.nacos.namespace}
       group: ${mate.im.dubbo.nacos.group}
   application:
