@@ -23,6 +23,7 @@
         <module>mate-im-skywalking</module>
         <module>mate-im-sa-token</module>
         <module>mate-im-api</module>
+        <module>mate-im-mq</module>
     </modules>
 
     <properties>

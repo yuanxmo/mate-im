@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: ${mate.im.rocketmq.url}
+rocketmq:
+  name-server: ${mate.im.rocketmq.url}
+  broker:
+    check: true
