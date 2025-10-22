@@ -23,10 +23,19 @@ public class SaTokenConfiguration {
                 .addInclude("/**")
                 .addExclude("/favicon.ico")
                 .setAuth(object -> {
-                    // 开放登录路径
-                    SaRouter.match("/**").notMatch("/auth/login").check(r -> StpUtil.checkLogin());
-
-                    SaRouter.match("/user/**", r -> StpUtil.checkPermissionOr(UserPermission.BASIC.name(), UserPermission.FROZEN.name()));
+                    // 登录拦截 -- 拦截所有路由，并排除 /auth/login，开放登录
+                    SaRouter.match("/**")
+                            .notMatch("/auth/login")
+                            .check(r -> StpUtil.checkLogin()
+                    );
+                    // 权限认证 -- 不同模块校验不同权限
+                    SaRouter.match(
+                            "/user/**",
+                            r -> StpUtil.checkPermissionOr(
+                                    UserPermission.BASIC.name(),
+                                    UserPermission.FROZEN.name()
+                            )
+                    );
                 })
                 .setError(this::getSaResult);
     }

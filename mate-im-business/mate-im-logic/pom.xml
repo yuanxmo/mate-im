@@ -11,11 +11,6 @@
 
     <artifactId>mate-im-logic</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>mate-im-guard</module>
-        <module>mate-im-message-single</module>
-        <module>mate-im-message-group</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
