@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -28,6 +29,11 @@ public class BaseUserInfo implements Serializable {
      * 性别
      */
     private Integer gender;
+
+    /**
+     * 出生日期
+     */
+    private Date birthDate;
     /**
      * 个性签名
      */

@@ -28,17 +28,10 @@ import lombok.Setter;
 public class User extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private String userId;
-
     /**
-     * 昵称
+     * 用户ID
      */
-    private String nickName;
-
-    /**
-     * 用户状态
-     */
-    private UserStateEnum state;
+    private Long userId;
 
     /**
      * 密码哈希
@@ -46,19 +39,27 @@ public class User extends BaseEntity implements Serializable {
     private String passwordHash;
 
     /**
+     * 用户头像url
+     */
+    private String avatar;
+
+    /**
+     * 昵称
+     */
+    private String nickName;
+
+    /**
      * 邮箱
      */
-    @SensitiveStrategyEmail
     private String email;
 
     /**
      * 手机号
      */
-    @SensitiveStrategyPhone
-    private String telephone;
+    private String telePhone;
 
     /**
-     * 性别
+     * 男
      */
     private Integer gender;
 
@@ -68,9 +69,14 @@ public class User extends BaseEntity implements Serializable {
     private Date birthDate;
 
     /**
-     * 个性签名
+     * 用户签名
      */
     private String userSignature;
+
+    /**
+     * 邀请人ID
+     */
+    private Long inviterId;
 
     /**
      * 邀请码
@@ -78,42 +84,13 @@ public class User extends BaseEntity implements Serializable {
     private String inviteCode;
 
     /**
-     * 邀请人用户ID
-     */
-    private String inviterId;
-
-    /**
-     * 最后登录时间
-     */
-    private Date lastLoginTime;
-
-    /**
-     * 用户头像url
-     */
-    private String avatar;
-
-    /**
      * 用户角色
      */
-    private UserRole userRole;
+    private String userRole;
 
     /**
-     * 注册（普通用户）
-     * @param email 邮箱
-     * @param nickName 昵称
-     * @param password 密码
-     * @param inviteCode 邀请码
-     * @param inviterId 邀请人ID
-     * @return 用户对象
+     * 用户状态
      */
-    public User register(String email, String nickName, String password, String inviteCode, String inviterId) {
-        this.setEmail(email);
-        this.setNickName(nickName);
-        this.setPasswordHash(DigestUtil.md5Hex(password));
-        this.setState(UserStateEnum.INIT);
-        this.setUserRole(UserRole.NORMAL_USER);
-        this.setInviteCode(inviteCode);
-        this.setInviterId(inviterId);
-        return this;
-    }
+    private Boolean state;
+
 }
