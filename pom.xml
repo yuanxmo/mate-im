@@ -148,6 +148,12 @@
 
             <dependency>
                 <groupId>com.mate.im</groupId>
+                <artifactId>mate-im-email</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-prometheus</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -161,6 +167,12 @@
             <dependency>
                 <groupId>com.mate.im</groupId>
                 <artifactId>mate-im-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mate.im</groupId>
+                <artifactId>mate-im-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
