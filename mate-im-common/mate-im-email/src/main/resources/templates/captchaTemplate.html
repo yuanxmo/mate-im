@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mate-im: 验证码</title>
+</head>
+<body>
+    <div id="page" class="site">
+        <div class="container">
+            <div class="title">
+                <h1 style="font-size: 24px">mate-im<br>尺素轻达，款语温言</h1>
+            </div>
+            <div class="main">
+                <p>您好！您的<strong th:text="${TYPE}" style="color: #e74c3c;"></strong>验证码是：<strong th:text="${CAPTCHA}" style="font-size: 20px; color: #e74c3c;"></strong></p>
+                <P>为了账户安全，请尽快完成验证。</P>
+                <p>验证码有效期为 <strong th:text="${EXPIRY_TIME} + '分钟'" style="color: #27ae60;"></Strong>，过期后需要重新申请。</p>
+                <p style="font-size: 14px; color: #888; text-align: center; margin-top: 20px;">如果您没有发起此请求，请忽略此邮件。</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        *, ::before::after {
+            box-sizing: border-box;
+        }
+
+        .site {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .container {
+            /* background-color: #f4f7fc; */
+            z-index: -2;
+            padding: 0 30px;
+            margin: 0 auto;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .title::before {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 30%;
+            background: linear-gradient(to right, #4460f1, #c471ed, #f64f59);
+            z-index: -1;
+            -webkit-filter: blur(50px);
+        }
+
+        .main {
+            margin: 0 0 30px 20px;
+        }
+    </style>
+</body>
+</html>
