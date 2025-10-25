@@ -6,6 +6,6 @@ import org.apache.dubbo.config.annotation.DubboService;
 /**
  * @author yuanxmo
  */
-@DubboService(version = "1.0")
+@DubboService(version = "1.0.0")
 public class UserFacadeServiceImpl implements UserFacadeService {
 }

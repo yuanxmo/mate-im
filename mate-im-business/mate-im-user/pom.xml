@@ -48,6 +48,11 @@
 
         <dependency>
             <groupId>com.mate.im</groupId>
+            <artifactId>mate-im-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mate.im</groupId>
             <artifactId>mate-im-api</artifactId>
         </dependency>
 

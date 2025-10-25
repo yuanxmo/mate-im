@@ -27,6 +27,8 @@ public class SaTokenConfigure {
                     // 登录拦截 -- 拦截所有路由，并排除 /auth/login，开放登录
                     SaRouter.match("/**")
                             .notMatch("/auth/login")
+                            .notMatch("/auth/register")
+                            .notMatch("/auth/test")
                             .check(r -> StpUtil.checkLogin()
                     );
                     // TODO 权限认证 -- 不同模块校验不同权限

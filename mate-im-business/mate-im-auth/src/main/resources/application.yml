@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: @application.name@
+  config:
+    import: classpath:base.yml,classpath:rpc.yml,classpath:cache.yml
+sa-token:
+  token-name: satoken
+  timeout: 2592000
+  active-timeout: -1
+  is-concurrent: true
+  is-share: true
+  token-style: uuid
+  is-log: true
+server:
+  port: 8092
+dubbo:
+  application:
+    qos-port: 33335
