@@ -24,6 +24,8 @@
         <module>mate-im-sa-token</module>
         <module>mate-im-api</module>
         <module>mate-im-mq</module>
+        <module>mate-im-web</module>
+        <module>mate-im-email</module>
     </modules>
 
     <properties>
