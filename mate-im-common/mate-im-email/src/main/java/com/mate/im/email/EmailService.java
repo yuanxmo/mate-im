@@ -9,7 +9,6 @@ import com.mate.im.email.response.EmailSendResponse;
  * @author yuanxmo
  */
 public interface EmailService {
-    Integer expireMinutes = 15;
 
     /**
      * 发送验证码

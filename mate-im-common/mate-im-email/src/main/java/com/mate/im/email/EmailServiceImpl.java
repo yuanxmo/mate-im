@@ -94,8 +94,9 @@ public class EmailServiceImpl implements EmailService {
         return emailSendResponse;
     }
 
+    @Override
     @DistributeLock(scene = "SEND_EMAIL", keyExpression = "#email")
-    public EmailSendResponse sendCaptcha(EmailType emailType, String email, String captcha) {
+    public EmailSendResponse sendCaptcha(EmailType emailType, String email, String captcha, int expireMinutes) {
         EmailSendResponse emailSendResponse = new EmailSendResponse();
         // 空子段判断
         if (emailType == null || StringUtils.isAnyBlank(email, captcha)) {

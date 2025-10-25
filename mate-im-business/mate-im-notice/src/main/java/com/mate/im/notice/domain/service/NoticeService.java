@@ -1,6 +1,7 @@
 package com.mate.im.notice.domain.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mate.im.api.notice.constant.NoticeType;
 import com.mate.im.base.exception.BizException;
 import com.mate.im.base.exception.BizExceptionCode;
 import com.mate.im.notice.domain.entity.Notice;
@@ -26,7 +27,7 @@ public class NoticeService extends ServiceImpl<NoticeMapper, Notice> {
         Notice notice = Notice.builder()
                 .noticeTitle(EMAIL_NOTICE_TITLE)
                 .noticeContent(captcha)
-                .noticeType(NoticeType.EMAIL)
+                .noticeType(NoticeType.REGISTER_CAPTCHA_EMAIL)
                 .targetAddress(email)
                 .build();
         boolean saveResult = this.save(notice);
