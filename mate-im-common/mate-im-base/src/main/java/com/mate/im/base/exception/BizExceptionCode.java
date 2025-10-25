@@ -34,7 +34,15 @@ public enum BizExceptionCode implements ExceptionCode{
     /**
      * 远程调用返回结果失败
      */
-    REMOTE_CALL_RESPONSE_IS_FAILED("REMOTE_CALL_RESPONSE_IS_FAILED", "远程调用返回结果失败");
+    REMOTE_CALL_RESPONSE_IS_FAILED("REMOTE_CALL_RESPONSE_IS_FAILED", "远程调用返回结果失败"),
+
+    SEND_NOTICE_DUPLICATED("SEND_NOTICE_DUPLICATED", "发送通知重复"),
+
+    NOTICE_SAVE_FAILED("NOTICE_SAVE_FAILED", "通知保存失败"),
+
+    NOTICE_TYPE_ERROR("NOTICE_TYPE_ERROR", "通知类型错误");
+
+
 
     private String code;
 
